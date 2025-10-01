@@ -16,8 +16,11 @@ let Add (numbers: string) : int =
             let mutable sum = 0
             //Iterate through the array, parsing each string to int and adding it to the sum
             for number in numbers do
-                let n = System.Int32.Parse(number)
-                sum <- sum + n
+                if number.Trim() = "" then 
+                    sum <- sum + 0 //Handle case of empty string between commas or at the end (took it from task 2 resolution)
+                else
+                    let n = System.Int32.Parse(number)
+                    sum <- sum + n
             //Return the final sum
             sum
 
