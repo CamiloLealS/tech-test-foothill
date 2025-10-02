@@ -10,6 +10,13 @@ the array and just summing the previous numbers.
 In the 3rd task, after more researching and reading, i could implemented validations like TryParse
 for value errors and found the way to use multiple delimiters to split a string.
 Realized that previous tasks could be improved with some of these practices.
+In python I'm using regex, cause I'm trying to give my best solution, but in F# I'm trying to solve it
+creatively.
 --------------------------------------------------------------------------------------------
 In the 4rd task, had to manage the input to identify the delimiter in the first line and only iterate the rest of the lines.
+---------------------------------------------------------------------------------------------
+In the 5th task, there are some differences in my code between languages for this solution,
+because the task ask for a return INT from the function Add, so I had to use another ways to
+reach the expected result.
+Now I created a function in the F# code to validate the inputs and separate the responsibilities. Like I have it in Python code.
 ---------------------------------------------------------------------------------------------
