@@ -6,3 +6,7 @@ treat it like an invalid input, but i could've managed it deleting the last empt
 the array and just summing the previous numbers.
 --------------------------------------------------------------------------------------------
 2nd task has better validation for extra comma and empty strings ('2,,5,2').
+--------------------------------------------------------------------------------------------
+In the 3rd task, after more researching and reading, i could implemented validations like TryParse
+for value errors and found the way to use multiple delimiters to split a string.
+Realized that previous tasks could be improved with some of these practices.
