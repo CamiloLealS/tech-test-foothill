@@ -1,7 +1,29 @@
-//Task 4: Custom Delimiters
+//Task 6: Ignoring Giants
 
 //"open System" to avoid prefixing functions like Int32, String, etc
 open System
+
+let SafeInt (n: string): int =
+    let s = n.Trim()
+    if s = "" then
+        0
+    else
+        //try to parse the number and add it to the sum or print an error message
+        match Int32.TryParse(s) with
+        | (true, v) ->
+            //check for negative numbers and print an error message
+            if v < 0 then
+                printfn "Error: Negatives not allowed: %d" v
+                -1
+            //ignore numbers greater than 1000 and print a warning message
+            elif v > 1000 then
+                printfn "Warning: Number too large and will be ignored: %d" v
+                0
+            else
+                v
+        | (false, _) ->
+            printfn "Error: Invalid number: '%s'" s
+            -1
 
 //Define Add function to sum numbers in a string separated by custom delimiters or new lines
 let Add (numbers: string) : int =
@@ -28,16 +50,11 @@ let Add (numbers: string) : int =
 
         //iterate through each number in the list
         for num in num_list do
-            let s = num.Trim()
-
-            if s = "" then
-                sum <- sum + 0
-            else
-                //try to parse the number and add it to the sum or print an error message
-                match Int32.TryParse(s) with
-                | (true, v) -> sum <- sum + v
-                | (false, _) ->
-                    printfn "This is not a valid number: %s" s
+            let toSum = SafeInt num //get the integer value or -1 if error
+            if toSum = -1 then
+                sum <- -1 //set sum to -1 to indicate an error has occurred
+            else if sum <> -1 then //only add to sum if no previous errors
+                sum <- sum + toSum
         sum
 
 let mutable running = true
@@ -67,7 +84,9 @@ while running do
     if running then
         //Join all input lines into a single string with commas and new line separators
         let allInput = String.Join("\n", inputLines) 
-        let result = Add allInput
+        let result= Add allInput
 
-        printfn "The sum is: %d" result
+        //-1 indicates an error has occurred, so we only print the result if no errors
+        if result <> -1 then
+            printfn "The sum is: %d" result
         printfn "----------------------------------------------"
