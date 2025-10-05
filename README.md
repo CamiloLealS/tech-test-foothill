@@ -20,3 +20,6 @@ because the task ask for a return INT from the function Add, so I had to use ano
 reach the expected result.
 Now I created a function in the F# code to validate the inputs and separate the responsibilities. Like I have it in Python code.
 ---------------------------------------------------------------------------------------------
+In the 7th task, I created another function for the responsability of find the delimiter trying to improve my code.
+This time I used the function Replace to manage the string of the first line of input to obtain the delimiter.
+---------------------------------------------------------------------------------------------
