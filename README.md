@@ -30,3 +30,4 @@ In the last task, I had to change the way to split the delimiters in the first l
 ---------------------------------------------------------------------------------------------
 This technical challenge helped me understand some of the fundamentals of the f# language, to improve my problem solving and string management skills.
 I'm thankful for the opportunity!
+---------------------------------------------------------------------------------------------
