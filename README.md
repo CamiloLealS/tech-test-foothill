@@ -25,3 +25,8 @@ This time I used the function Replace to manage the string of the first line of 
 ---------------------------------------------------------------------------------------------
 In the 8th task, like the example, the size of each delimiter is 1, so I can use an Array of chars(the delimiters) in the Split function, then sum the numbers.
 I had to fix 7th task, because I realized that I made a mistake in Python Code about the pattern in regex for delimiters.
+---------------------------------------------------------------------------------------------
+In the last task, I had to change the way to split the delimiters in the first line.
+---------------------------------------------------------------------------------------------
+This technical challenge helped me understand some of the fundamentals of the f# language, to improve my problem solving and string management skills.
+I'm thankful for the opportunity!
