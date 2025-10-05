@@ -17,9 +17,15 @@ def safe_int(s, negatives, invalids, giants):
         return 0
     
 def FindDelimiter(input):
-    delimiter = re.split(r'\n', input)[0].replace("//", "")
+    # Split input to find custom delimiter in the first line
+    delimiters = re.split(r'\n', input)[0].replace("//", "")
     num_list = "\n".join(re.split(r'\n', input)[1:])
-    pattern = rf'|{delimiter}|\n+'
+
+    # Escape delimiters for regex
+    escaped = [re.escape(d) for d in delimiters]
+
+    # Create regex pattern to split by any of the delimiters or new lines
+    pattern = rf"(?:{'|'.join(escaped)}|\n)+"
 
     return pattern, num_list
 
