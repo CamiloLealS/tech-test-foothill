@@ -11,7 +11,7 @@ In the 3rd task, after more researching and reading, i could implemented validat
 for value errors and found the way to use multiple delimiters to split a string.
 Realized that previous tasks could be improved with some of these practices.
 In python I'm using regex, cause I'm trying to give my best solution, but in F# I'm trying to solve it
-creatively.
+creatively without it.
 --------------------------------------------------------------------------------------------
 In the 4rd task, had to manage the input to identify the delimiter in the first line and only iterate the rest of the lines.
 ---------------------------------------------------------------------------------------------
@@ -23,3 +23,5 @@ Now I created a function in the F# code to validate the inputs and separate the 
 In the 7th task, I created another function for the responsability of find the delimiter trying to improve my code.
 This time I used the function Replace to manage the string of the first line of input to obtain the delimiter.
 ---------------------------------------------------------------------------------------------
+In the 8th task, like the example, the size of each delimiter is 1, so I can use an Array of chars(the delimiters) in the Split function, then sum the numbers.
+I had to fix 7th task, because I realized that I made a mistake in Python Code about the pattern in regex for delimiters.
